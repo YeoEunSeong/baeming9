@@ -7,6 +7,7 @@ const checkLoginReducer = (state = isLogin, action) => {};
 
 // 아이템 render 기능
 let items = [];
+// fire
 const renderItems = (state = items, action) => {};
 
 let currItem = [];

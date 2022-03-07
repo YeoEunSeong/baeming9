@@ -11,7 +11,7 @@ const Navigator = (props) => {
         </Link>
         <div>
           <label></label>
-          <input type="text" placeholder="검색어를 입력하세요" />
+          <input type="text" />
           <button />
         </div>
       </div>
