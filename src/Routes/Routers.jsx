@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import Items from "../components/Main/ItemList/Items";
+import Items from "../Components/Main/ItemList/Items";
 
 const Routers = (props) => {
   return (

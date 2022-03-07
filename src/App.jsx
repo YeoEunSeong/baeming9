@@ -1,6 +1,6 @@
-import Routers from "./routers/Routers";
-import Navigator from "./components/nav/Navigator";
-import Footer from "./components/footer/Footer";
+import Routers from "./Routes/Routers";
+import Navigator from "./Components/Header/Navigator";
+import Footer from "./Components/Footer/Footer";
 
 function App() {
   return (
