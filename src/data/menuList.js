@@ -7,6 +7,7 @@ const menuList = [
     title: "문구",
     link: "stationary",
   },
+  { title: "리빙", link: "living" },
   {
     title: "책",
     link: "book",

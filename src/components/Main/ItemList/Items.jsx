@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useSelector } from "react-redux";
+import Item from "../Item/Item";
 const Items = (props) => {
   return (
     <section>
       <ul>
-        <ul>아이템들입니당</ul>
+        <Item />
       </ul>
     </section>
   );
