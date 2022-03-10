@@ -6,7 +6,6 @@ import Login from "../Components/Main/Login/Login";
 const Routers = (props) => {
   return (
     <>
-      {/* <Routes exact path="/"></Routes> */}
       <Routes>
         <Route path="/:id" element={<Items />} />
         <Route path="/login" element={<Login />} />

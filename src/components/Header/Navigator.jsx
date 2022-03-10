@@ -6,7 +6,7 @@ import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { useSelector } from "react-redux";
 
 const Navigator = (props) => {
-  let { checkLoginReducer } = useSelector((state) => state);
+  // let { checkLoginReducer } = useSelector((state) => state);
 
   return (
     <nav>
@@ -22,7 +22,7 @@ const Navigator = (props) => {
           </button>
         </div>
       </div>
-      <div>
+      {/* <div>
         {checkLoginReducer ? (
           <>
             <Link to="/myPage">마이페이지</Link>
@@ -34,7 +34,7 @@ const Navigator = (props) => {
             <Link to="/signup">회원가입</Link>
           </>
         )}
-      </div>
+      </div> */}
       <MenuCategory />
     </nav>
   );
