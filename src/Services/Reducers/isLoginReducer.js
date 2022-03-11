@@ -6,6 +6,12 @@ const isLoginReducer = (state = initialState, action) => {
       const isLogin = action.payload;
       return isLogin;
 
+    case "COMPLETE_LOGIN":
+      return true;
+
+    case "COMPLETE_LOGOUT":
+      return false;
+
     default:
       return state;
   }

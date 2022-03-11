@@ -1,19 +1,25 @@
-import { signInWithEmailAndPassword } from "firebase/auth";
 import React, { useRef } from "react";
+import { useDispatch } from "react-redux";
 import { authService } from "../../../Services/firebase/firebase";
+import { loginWithUserInfo } from "../../../Services/firebase/firebaseAuthService";
 
 const LoginForm = (props) => {
+  const dispatch = useDispatch();
   const inputEmailRef = useRef();
   const inputPasswordRef = useRef();
 
   const onSubmit = async (e) => {
     e.preventDefault();
 
-    const [email, password] = [
-      inputEmailRef.current.value,
-      inputPasswordRef.current.value,
-    ];
-
+    try {
+      await loginWithUserInfo(
+        inputEmailRef.current.value,
+        inputPasswordRef.current.value
+      );
+      dispatch({ type: "COMPLETE_LOGIN" });
+    } catch (e) {
+      console.log(e);
+    }
     // const data = await signInWithEmailAndPassword(authService, email, password);
     // await signInWithEmailAndPassword(authService, Email, password);
   };

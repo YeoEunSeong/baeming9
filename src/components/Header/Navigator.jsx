@@ -4,9 +4,21 @@ import MenuCategory from "./menuCategory/MenuCategory";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { useSelector } from "react-redux";
+import { logoutUserInfo } from "../../Services/firebase/firebaseAuthService";
+import { useDispatch } from "react-redux";
 
 const Navigator = (props) => {
-  const { isLoginReuducers } = useSelector((state) => state);
+  const { isLoginReducer } = useSelector((state) => state);
+  const dispatch = useDispatch();
+
+  const userLogout = async () => {
+    try {
+      logoutUserInfo();
+      dispatch({ type: "COMPLETE_LOGOUT" });
+    } catch (e) {
+      console.log(e);
+    }
+  };
 
   return (
     <nav>
@@ -23,10 +35,11 @@ const Navigator = (props) => {
         </div>
       </div>
       <div>
-        {isLoginReuducers ? (
+        {isLoginReducer ? (
           <>
             <Link to="/myPage">마이페이지</Link>
             <Link to="/myPage">장바구니</Link>
+            <button onClick={userLogout}>로그아웃</button>
           </>
         ) : (
           <>

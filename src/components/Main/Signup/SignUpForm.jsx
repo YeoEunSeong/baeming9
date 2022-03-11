@@ -1,7 +1,7 @@
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import React, { useRef } from "react";
 import { authService } from "../../../Services/firebase/firebase";
-import createUserInfo from "../../../Services/firebase/firebaseAuthService";
+import { createUserInfo } from "../../../Services/firebase/firebaseAuthService";
 
 const SignUpForm = (props) => {
   const inputEmailRef = useRef();
