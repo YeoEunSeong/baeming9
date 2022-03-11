@@ -1,4 +1,4 @@
-import { authService } from "../firebase";
+import { authService } from "../firebase/firebase";
 
 const FETCH_LOGIN_INFO = "FETCH_LOGIN_INFO";
 const LOGIN_SUCCESS = "LOGIN_SUCCESS";

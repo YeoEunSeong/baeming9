@@ -1,5 +1,5 @@
 import { getFirestore, query, collection, getDocs } from "firebase/firestore";
-import { dbService } from "../firebase";
+import { dbService } from "../firebase/firebase";
 
 const FILTER_ITEMS = "FILTER_ITEMS";
 

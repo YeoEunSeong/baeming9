@@ -1,5 +1,6 @@
+import { signInWithEmailAndPassword } from "firebase/auth";
 import React, { useRef } from "react";
-import { authService } from "../../../Services/firebase";
+import { authService } from "../../../Services/firebase/firebase";
 
 const LoginForm = (props) => {
   const inputEmailRef = useRef();
@@ -8,11 +9,12 @@ const LoginForm = (props) => {
   const onSubmit = async (e) => {
     e.preventDefault();
 
-    const [Email, password] = [
+    const [email, password] = [
       inputEmailRef.current.value,
       inputPasswordRef.current.value,
     ];
 
+    // const data = await signInWithEmailAndPassword(authService, email, password);
     // await signInWithEmailAndPassword(authService, Email, password);
   };
 
