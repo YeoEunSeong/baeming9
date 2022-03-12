@@ -4,7 +4,6 @@ import {
   signInWithEmailAndPassword,
   signOut,
 } from "firebase/auth";
-import { Navigate, Route } from "react-router-dom";
 import setUserInfo from "./setUserInfo";
 
 const createUserInfo = async (userInfo) => {

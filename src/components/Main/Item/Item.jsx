@@ -13,10 +13,14 @@ const Item = (props) => {
     dispatch(categoryFilterItemsData(param.id));
   }, [param.id]);
 
+  const clickItem = (item) => {
+    dispatch({ type: "CLICK_ITEM" });
+  };
+
   return (
-    <>
+    <ul>
       {ItemsReducer.map((item) => (
-        <li>
+        <li onClick={clickItem(item)}>
           <img
             src={
               "https://store.baemin.com/data/goods/21/11/45/363/363_detail_092.jpg"
@@ -29,7 +33,7 @@ const Item = (props) => {
           </div>
         </li>
       ))}
-    </>
+    </ul>
   );
 };
 

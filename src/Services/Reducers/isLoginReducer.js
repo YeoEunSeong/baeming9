@@ -1,3 +1,5 @@
+import { authService } from "../firebase/firebase";
+
 const initialState = false;
 
 const isLoginReducer = (state = initialState, action) => {
@@ -7,7 +9,9 @@ const isLoginReducer = (state = initialState, action) => {
       return isLogin;
 
     case "COMPLETE_LOGIN":
-      return true;
+      const LoginInfo = authService.currentUser;
+      let login = LoginInfo ? true : false;
+      return login;
 
     case "COMPLETE_LOGOUT":
       return false;

@@ -1,10 +1,12 @@
 import React, { useRef } from "react";
 import { useDispatch } from "react-redux";
+import { Navigate, Route } from "react-router-dom";
 import { authService } from "../../../Services/firebase/firebase";
 import { loginWithUserInfo } from "../../../Services/firebase/firebaseAuthService";
 
 const LoginForm = (props) => {
   const dispatch = useDispatch();
+
   const inputEmailRef = useRef();
   const inputPasswordRef = useRef();
 
@@ -17,6 +19,7 @@ const LoginForm = (props) => {
         inputPasswordRef.current.value
       );
       dispatch({ type: "COMPLETE_LOGIN" });
+      // <Route path="*" element={<Navigate replace to="/" />} />;
     } catch (e) {
       console.log(e);
     }
