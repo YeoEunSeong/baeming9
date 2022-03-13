@@ -1,12 +1,12 @@
 import { combineReducers } from "redux";
 import ItemsReducer from "./Reducers/ItemReducer";
 import isLoginReducer from "./Reducers/isLoginReducer";
-import selectItem from "./Reducers/selectItem";
+import selectItemReducer from "./Reducers/selectItemReducer";
 
 const rootReducer = combineReducers({
   ItemsReducer,
   isLoginReducer,
-  selectItem,
+  selectItemReducer,
 });
 
 export default rootReducer;

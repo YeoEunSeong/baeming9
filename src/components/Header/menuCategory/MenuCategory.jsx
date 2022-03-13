@@ -7,10 +7,10 @@ const MenuCategory = (props) => {
   // const dispatch = useDispatch();
   return (
     <ul>
-      {menuList.map((category) => (
-        <Link to={`/${category.link}`}>
-          <li>{category.title}</li>
-        </Link>
+      {menuList.map((category, number) => (
+        <li key={`category+${number}`}>
+          <Link to={`/${category.link}`}>{category.title}</Link>
+        </li>
       ))}
     </ul>
   );

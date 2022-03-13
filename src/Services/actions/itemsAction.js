@@ -11,9 +11,13 @@ const categoryFilterItemsData = (category) => async (dispatch) => {
     let Item = [];
 
     querySnapshot.forEach((doc) => {
-      if (category === "all") Item = [doc.data(), ...Item];
+      const newData = {
+        id: doc.id,
+        ...doc.data(),
+      };
+      if (category === "all") Item = [newData, ...Item];
       else {
-        if (doc.data().category === category) Item = [doc.data(), ...Item];
+        if (newData.category === category) Item = [newData, ...Item];
       }
     });
 
