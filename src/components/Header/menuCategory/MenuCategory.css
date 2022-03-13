@@ -1,9 +1,7 @@
 .menuCategory {
-  /* background-color: red; */
   display: flex;
   justify-content: center;
   color: #333;
-  /* margin: 0 auto 0 auto; */
   border-bottom: 1px solid hsl(0, 0%, 92%);
 }
 
@@ -14,6 +12,7 @@
 .menuCategory > li > a {
   color: #333;
   font-size: 17px;
+  font-weight: 500;
 }
 
 .menuCategory > li > a:hover {

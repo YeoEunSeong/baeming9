@@ -6,6 +6,7 @@ import "./MenuCategory.css";
 import menuList from "../../../data/menuList";
 const MenuCategory = (props) => {
   // const dispatch = useDispatch();
+
   return (
     <ul className="menuCategory">
       {menuList.map((category, number) => (

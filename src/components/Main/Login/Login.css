@@ -1,0 +1,46 @@
+.login {
+  /* background-color: red; */
+  margin: 30px auto 0 auto;
+}
+
+.login__form {
+  width: 30%;
+  /* background-color: green; */
+  margin: 10px auto 0 auto;
+}
+.login__head {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.login__input > input {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #c0c0c0;
+  margin-bottom: 20px;
+}
+
+.login__button {
+  width: 100%;
+  background: #333;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  height: 55px;
+}
+
+.login__button:disabled {
+  background: rgb(133, 132, 132);
+}
+
+.login__sub {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px auto 0 auto;
+}
+
+.login__sub > a {
+  color: #333;
+}

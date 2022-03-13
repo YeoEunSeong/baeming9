@@ -2,16 +2,9 @@ import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
-import categoryFilterItemsData from "../../../Services/actions/itemsAction";
 
 const Item = (props) => {
-  const dispatch = useDispatch();
   const { ItemsReducer } = useSelector((state) => state);
-  const param = useParams();
-
-  useEffect(() => {
-    dispatch(categoryFilterItemsData(param.id));
-  }, [param.id]);
 
   return (
     <ul>

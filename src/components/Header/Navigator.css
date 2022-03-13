@@ -22,7 +22,7 @@
 .nav__search {
   position: absolute;
   top: 70px;
-  right: 141px;
+  right: 8%;
 }
 
 .nav__search > input {
@@ -31,7 +31,8 @@
   border: none;
   border-bottom: 1px solid #333;
   height: 34px;
-  padding: 5px;
+  padding: 3px;
+  margin-right: 10px;
 }
 .nav__search > input:focus,
 .nav__search > input:hover {
@@ -49,9 +50,15 @@
   border-bottom: 1px solid hsl(0, 0%, 92%);
 }
 
-.nav__subNav > a {
+.nav__subNav > div {
+  float: right;
+  margin-right: 8%;
+}
+
+.nav__subNav > div > a {
   font-size: 14px;
   font-weight: 500;
+  margin: 0 10px 0 10px;
   color: #717171;
 }
 
@@ -59,12 +66,8 @@
   color: #717171;
   font-size: 14px;
   font-weight: 500;
+  margin: 0 10px 0 10px;
   padding: 0;
   background-color: transparent;
   border: none;
-}
-
-.nav__subNav > button:hover,
-.nav__subNav > a:hover {
-  color: #2ac1bc;
 }
