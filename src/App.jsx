@@ -4,6 +4,7 @@ import Footer from "./Components/Footer/Footer";
 import { useDispatch, useSelector } from "react-redux";
 import fetchLoginInfo from "./Services/actions/loginAction";
 import { useEffect } from "react";
+import { Reset } from "styled-reset";
 
 const App = (props) => {
   let dispatch = useDispatch();
@@ -14,6 +15,7 @@ const App = (props) => {
 
   return (
     <>
+      <Reset />
       <Navigator />
       <Routers />
       <Footer />

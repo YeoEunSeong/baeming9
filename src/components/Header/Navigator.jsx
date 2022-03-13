@@ -6,6 +6,7 @@ import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { useSelector } from "react-redux";
 import { logoutUserInfo } from "../../Services/firebase/firebaseAuthService";
 import { useDispatch } from "react-redux";
+import "./Navigator.css";
 
 const Navigator = (props) => {
   const { isLoginReducer } = useSelector((state) => state);
@@ -22,19 +23,28 @@ const Navigator = (props) => {
 
   return (
     <nav>
-      <div>
+      <div className="nav__logoSearch">
         <Link to="/">
-          <h1>배민방구</h1>
+          <div>
+            <img className="logo" src="/assets/logo.png" alt="logo" />
+            <h1 className="sr-only">배민방구</h1>
+          </div>
         </Link>
-        <div>
-          <label></label>
-          <input type="text" />
+        <div className="nav__search">
+          <label className="sr-only" for="nav__search--input">
+            검색
+          </label>
+          <input
+            id="nav__search--input"
+            type="text"
+            placeholder="검색어를 입력해주세요"
+          />
           <button>
-            <FontAwesomeIcon icon={faMagnifyingGlass} />
+            <FontAwesomeIcon icon={faMagnifyingGlass} size="lg" />
           </button>
         </div>
       </div>
-      <div>
+      <div className="nav__subNav">
         {isLoginReducer ? (
           <>
             <Link to="/myPage">마이페이지</Link>
@@ -48,7 +58,9 @@ const Navigator = (props) => {
           </>
         )}
       </div>
-      <MenuCategory />
+      <div className="nav__menuCategory">
+        <MenuCategory />
+      </div>
     </nav>
   );
 };

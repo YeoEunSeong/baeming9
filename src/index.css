@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;500;700;900&display=swap");
+
+#root {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 16px;
+}
+
+::selection {
+  color: white;
+  background-color: #2ac1bc;
+}
+
+button {
+  font-family: "Noto Sans KR", sans-serif;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.sr-only {
+  overflow: hidden;
+  position: absolute !important;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}

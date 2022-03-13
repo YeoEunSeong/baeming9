@@ -1,0 +1,70 @@
+.nav__logoSearch {
+  position: relative;
+  height: 150px;
+  background-color: #fff;
+}
+
+.nav__logoSearch > a {
+  display: flex;
+  justify-content: center;
+  line-height: 150px;
+}
+.nav__logoSearch > a > div {
+  display: inline;
+  height: 100px;
+  line-height: 210px;
+}
+
+.nav__logoSearch > a > div > img {
+  width: 159px;
+}
+
+.nav__search {
+  position: absolute;
+  top: 70px;
+  right: 141px;
+}
+
+.nav__search > input {
+  font-size: 16px;
+  width: 300px;
+  border: none;
+  border-bottom: 1px solid #333;
+  height: 34px;
+  padding: 5px;
+}
+.nav__search > input:focus,
+.nav__search > input:hover {
+  outline: none;
+}
+
+/* 로그인, 회원가입 부분 */
+.nav__subNav {
+  background-color: white;
+  line-height: 40px;
+  position: absolute;
+  width: 100%;
+  height: 40px;
+  top: 0;
+  border-bottom: 1px solid hsl(0, 0%, 92%);
+}
+
+.nav__subNav > a {
+  font-size: 14px;
+  font-weight: 500;
+  color: #717171;
+}
+
+.nav__subNav > button {
+  color: #717171;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+}
+
+.nav__subNav > button:hover,
+.nav__subNav > a:hover {
+  color: #2ac1bc;
+}
