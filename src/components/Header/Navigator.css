@@ -62,7 +62,7 @@
   color: #717171;
 }
 
-.nav__subNav > button {
+.nav__subNav > div > button {
   color: #717171;
   font-size: 14px;
   font-weight: 500;

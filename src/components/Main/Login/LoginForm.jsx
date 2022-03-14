@@ -44,12 +44,7 @@ const LoginForm = (props) => {
           <label>비밀번호</label>
           <input ref={inputPasswordRef} />
         </div>
-        <button
-          className="login__button"
-          type="submit"
-          onClick={onClick}
-          disabled
-        >
+        <button className="login__button" type="submit" onClick={onClick}>
           로그인
         </button>
       </fieldset>

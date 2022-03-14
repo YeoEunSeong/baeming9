@@ -46,11 +46,11 @@ const Navigator = (props) => {
       </div>
       <div className="nav__subNav">
         {isLoginReducer ? (
-          <>
+          <div>
             <Link to="/myPage">마이페이지</Link>
             <Link to="/myPage">장바구니</Link>
             <button onClick={userLogout}>로그아웃</button>
-          </>
+          </div>
         ) : (
           <div>
             <Link to="/login">로그인</Link>

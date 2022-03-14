@@ -9,6 +9,7 @@ const SIGN_IN_FAIL = "SIGN_IN_FAIL";
 const fetchLoginInfo = () => async (dispatch) => {
   try {
     const isLogin = authService.currentUser;
+    console.log(isLogin);
     dispatch({ type: FETCH_LOGIN_INFO, payload: isLogin });
   } catch (e) {
     console.log(e);
