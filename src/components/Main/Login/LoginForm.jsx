@@ -27,10 +27,6 @@ const LoginForm = (props) => {
     // await signInWithEmailAndPassword(authService, Email, password);
   };
 
-  const onClick = () => {
-    // console.log(inputIdRef.current.value);
-  };
-
   return (
     <form className="login__form" onSubmit={(e) => onSubmit(e)}>
       <h2 className="sr-only">로그인</h2>
@@ -44,7 +40,7 @@ const LoginForm = (props) => {
           <label>비밀번호</label>
           <input ref={inputPasswordRef} />
         </div>
-        <button className="login__button" type="submit" onClick={onClick}>
+        <button className="login__button" type="submit">
           로그인
         </button>
       </fieldset>

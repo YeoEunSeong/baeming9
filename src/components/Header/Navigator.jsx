@@ -31,7 +31,7 @@ const Navigator = (props) => {
           </div>
         </Link>
         <div className="nav__search">
-          <label className="sr-only" for="nav__search--input">
+          <label className="sr-only" htmlFor="nav__search--input">
             검색
           </label>
           <input

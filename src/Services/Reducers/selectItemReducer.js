@@ -2,9 +2,9 @@ const initailSelect = null;
 
 const selectItemReducer = (state = initailSelect, action) => {
   switch (action.type) {
-    // case "CLICK_ITEM":
-    //   // return this.state;
-    //   return {}
+    case "FETCH_ITEM_DETAIL":
+      const Item = action.payload;
+      return Item;
 
     default:
       return state;

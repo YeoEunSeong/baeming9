@@ -6,7 +6,7 @@ const LOGIN_FAIL = "LOGIN_FAIL";
 const SIGN_IN_SUCCESS = "SIGN_IN_SUCCESS";
 const SIGN_IN_FAIL = "SIGN_IN_FAIL";
 
-const fetchLoginInfo = () => async (dispatch) => {
+const fetchLoginInfo = (id) => async (dispatch) => {
   try {
     const isLogin = authService.currentUser;
     console.log(isLogin);
